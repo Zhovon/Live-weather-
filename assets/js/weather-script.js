@@ -26,7 +26,7 @@ jQuery(window).on('elementor/frontend/init', function () {
                 widget.find('.elw-temp').html(Math.round(data.main.temp) + '&deg;C');
                 widget.find('.elw-desc').text(data.weather[0].description);
                 
-                // USE @4x FOR HIGH QUALITY
+                // USE 4x FOR HIGH QUALITY
                 const iconCode = data.weather[0].icon;
                 widget.find('.elw-icon').attr('src', `https://openweathermap.org/img/wn/${iconCode}@4x.png`);
 
