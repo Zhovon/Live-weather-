@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit; 
 }
 
 class Elementor_Live_Weather_Widget extends \Elementor\Widget_Base {
@@ -23,7 +23,7 @@ class Elementor_Live_Weather_Widget extends \Elementor\Widget_Base {
 
     protected function register_controls() {
 
-        // ================= CONTENT TAB =================
+        // ================= CONTENT =================
         $this->start_controls_section(
             'content_section',
             [
@@ -54,7 +54,7 @@ class Elementor_Live_Weather_Widget extends \Elementor\Widget_Base {
 
         $this->end_controls_section();
 
-        // ================= STYLE TAB: CARD =================
+        // ================= CARD =================
         $this->start_controls_section(
             'section_style_card',
             [
@@ -129,7 +129,7 @@ class Elementor_Live_Weather_Widget extends \Elementor\Widget_Base {
 
         $this->end_controls_section();
 
-        // ================= STYLE TAB: TYPOGRAPHY =================
+        // ================= TYPOGRAPHY =================
         $this->start_controls_section(
             'section_style_typography',
             [
@@ -138,7 +138,8 @@ class Elementor_Live_Weather_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        // City Name
+        // City 
+        
         $this->add_control(
             'heading_city',
             [
@@ -227,7 +228,7 @@ class Elementor_Live_Weather_Widget extends \Elementor\Widget_Base {
 
         $this->end_controls_section();
 
-        // ================= STYLE TAB: ICON =================
+        // ================= ICON =================
         $this->start_controls_section(
             'section_style_icon',
             [
