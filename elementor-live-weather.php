@@ -9,19 +9,6 @@
  * License: GPLv2 or later
  */
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-
-require 'plugin-update-checker/plugin-update-checker.php';
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-
-$myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/Zhovon/Live-weather-', 
-	__FILE__,
-	'elementor-live-weather' 
-);
-if ( ! defined( 'ABSPATH' ) ) {
     exit; 
 }
 
