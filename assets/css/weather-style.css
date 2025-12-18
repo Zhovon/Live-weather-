@@ -1,6 +1,4 @@
-/* Base Layout */
 .elw-weather-card {
-    /* Default styling if user sets nothing */
     background: #f1f1f1; 
     color: #333;
     padding: 20px;
@@ -8,15 +6,12 @@
     transition: all 0.3s ease;
 }
 
-/* Flex layout for Icon + Temp */
 .elw-temp-wrap {
     display: flex;
     align-items: center;
-    /* justify-content handled by Elementor control */
     margin: 10px 0;
 }
 
-/* Floating Animation for the Icon */
 @keyframes elw-float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
@@ -26,11 +21,10 @@
 .elw-icon {
     width: 80px; 
     height: 80px;
-    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2)); /* Nice shadow on transparent PNG */
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2)); 
     animation: elw-float 3s ease-in-out infinite;
 }
 
-/* Font Resets */
 .elw-city-name {
     margin: 0;
 }
