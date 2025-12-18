@@ -8,9 +8,21 @@
  * Text Domain: elw-weather
  * License: GPLv2 or later
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+	exit;
+}
+
+
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/Zhovon/Live-weather-', 
+	__FILE__,
+	'elementor-live-weather' 
+);
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; 
 }
 
 final class Elementor_Live_Weather {
@@ -31,16 +43,14 @@ final class Elementor_Live_Weather {
     }
 
     public function init() {
-        // Check if Elementor is installed and active
+        
         if ( ! did_action( 'elementor/loaded' ) ) {
             add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin' ] );
             return;
         }
 
-        // Register Widget
         add_action( 'elementor/widgets/register', [ $this, 'register_widgets' ] );
         
-        // Enqueue Assets
         add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'enqueue_styles' ] );
         add_action( 'elementor/frontend/after_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
     }
